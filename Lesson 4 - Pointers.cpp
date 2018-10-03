@@ -12,6 +12,15 @@ void Swap(int* x, int* y) {
 	*y = temp;
 }
 
+void PrintEvenNumbers(int* arr) {
+	for (int i = 0; i < 10; i++) {
+		if (*arr % 2 == 0) {
+			cout << *arr << "\n";
+		}
+		arr++;
+	}
+}
+
 int main() {
 
 	int a = 10;
@@ -24,7 +33,12 @@ int main() {
 
 	cout << "Value of dereferenced ap is " << *ap << "\nValue of dereferenced bp is " << *bp;
 	Swap(ap, bp);
-	cout << "\nValue of dereferenced ap is " << *ap << "\nValue of dereferenced bp is " << *bp;
+	cout << "\nValue of dereferenced ap is " << *ap << "\nValue of dereferenced bp is " << *bp << "\n";
+
+	int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+
+	PrintEvenNumbers(myArray);
+
 	cin >> *ap;
 
 	/*int a = 100;
