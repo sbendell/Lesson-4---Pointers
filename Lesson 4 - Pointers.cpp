@@ -6,9 +6,28 @@
 
 using namespace std;
 
+void Swap(int* x, int* y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
 int main() {
 
-	int a = 100;
+	int a = 10;
+	int b = 5;
+
+	int* ap;
+	int* bp;
+	ap = &a;
+	bp = &b;
+
+	cout << "Value of dereferenced ap is " << *ap << "\nValue of dereferenced bp is " << *bp;
+	Swap(ap, bp);
+	cout << "\nValue of dereferenced ap is " << *ap << "\nValue of dereferenced bp is " << *bp;
+	cin >> *ap;
+
+	/*int a = 100;
 
 	cout << "Value in memory location a is " << a << "\n";
 
@@ -39,7 +58,7 @@ int main() {
 
 	int x;
 	cout << "Type in a numebr to finish" << "\n";
-	cin >> x;
+	cin >> x;*/
 
 	return 0;
 }
